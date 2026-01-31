@@ -24,28 +24,29 @@ class MemoryIngestor:
             # 1. Crear Nodos
             for idx, nodo in enumerate(nodos):
                 query = """
-                CREATE (n:TranscendentNode {
-                    id: $id,
-                    seq_id: $seq_id,
-                    source: $source,
-                    timestamp: $timestamp,
-                    words: $words,
-                    sentences: $sentences,
-                    reading_time: $reading_time,
-                    w_infra: $w_infra,
-                    w_ia: $w_ia,
-                    w_arch: $w_arch,
-                    w_meta: $w_meta,
-                    w_id: $w_id,
-                    w_proj: $w_proj,
-                    content: $content
-                })
+                MERGE (n:TranscendentNode {hash: $hash})
+                ON CREATE SET 
+                    n.id = $id,
+                    n.seq_id = $seq_id,
+                    n.source = $source,
+                    n.timestamp = $timestamp,
+                    n.words = $words,
+                    n.sentences = $sentences,
+                    n.reading_time = $reading_time,
+                    n.w_infra = $w_infra,
+                    n.w_ia = $w_ia,
+                    n.w_arch = $w_arch,
+                    n.w_meta = $w_meta,
+                    n.w_id = $w_id,
+                    n.w_proj = $w_proj,
+                    n.content = $content
                 """
                 
                 # Extraer pesos del tensor
                 tensor = nodo["Tensor_Trascendencia"]
                 
                 session.run(query, 
+                    hash=nodo["Hash"],
                     id=nodo["ID_Nodo"],
                     seq_id=idx,
                     source="Memoria_Persistente",
@@ -96,7 +97,8 @@ class MemoryIngestor:
 if __name__ == "__main__":
     ingestor = MemoryIngestor()
     try:
-        ingestor.clean_db()
+        # Para ingesta incremental, comentamos clean_db()
+        # ingestor.clean_db() 
         ingestor.ingest_nodos("../data/nodos_granulares.json")
         ingestor.query_sequence()
         print("\n✅ Malla de Memoria sincronizada con éxito en Neo4j.")

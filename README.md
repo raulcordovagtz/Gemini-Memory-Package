@@ -10,6 +10,9 @@ This package implements a multi-dimensional semantic memory system that allows a
   - `archeologist_v2.py`: Intelligent text segmentation and tensor extraction (6D).
   - `neo4j_ingest.py`: Graph database synchronization.
   - `neo4j_query.py`: Pattern retrieval and narrative inflation.
+  - `robustness_tester.py`: Content deduplication audit (SHA-256).
+  - `strategic_excavation.py`: Vector resonance analysis & anthropological reporting.
+  - `binomial_analysis.py`: Human-AI team performance & archetype inferencing.
   - `ollama_reconstructor.py`: Narrative legacy generator.
 - `data/`: Sample JSON tensors and granular nodes.
 - `docs/`: Evaluation reports, field notebooks, and reconstructed narratives.
@@ -37,8 +40,10 @@ Default used in this package: `user: neo4j`, `password: G-Obsidian-Vault`.
 ### 3. Execution Pipeline
 
 1. **Excavation**: Use `archeologist_v2.py` to process a text file.
-2. **Ingestion**: Run `neo4j_ingest.py` to save nodes into the graph.
-3. **Reconstruction**: Use `neo4j_query.py` to inflate the narrative using local LLMs (Ollama).
+2. **Audit**: Run `robustness_tester.py` to verify deduplication.
+3. **Ingestion**: Run `neo4j_ingest.py` to save nodes into the graph (Incremental/Merge).
+4. **Analysis**: Use `strategic_excavation.py` or `binomial_analysis.py` for high-level insights.
+5. **Reconstruction**: Use `neo4j_query.py` to inflate the narrative using local LLMs (Ollama).
 
 ## 🧪 Technical Specifications
 

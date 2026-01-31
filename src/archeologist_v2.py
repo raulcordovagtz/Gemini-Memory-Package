@@ -3,6 +3,7 @@ from transformers import AutoModel
 import time
 import json
 import re
+import hashlib
 from datetime import datetime
 
 class ArcheologistV2:
@@ -59,9 +60,13 @@ class ArcheologistV2:
                 "peso": round(float(sum(result.get("sentence_probabilities", [0])) / (len(result.get("sentence_probabilities", [1])) or 1)), 3)
             }
 
+        # Generar firma única (Hash) para deduplicación
+        content_hash = hashlib.sha256(segment.encode()).hexdigest()
+
         # Estructura compatible con Neo4j V3.0
         return {
             "ID_Nodo": f"ARK-SEG-{segment_id}-{int(time.time())}",
+            "Hash": content_hash,
             "Metadatos": {
                 "estrato": datetime.now().strftime("%Y-%m-%d %H:%M:%S"),
                 "metricas": metrics
@@ -85,7 +90,7 @@ class ArcheologistV2:
 
 if __name__ == "__main__":
     arch = ArcheologistV2()
-    site_path = "/Users/crotalo/Downloads/Virtual Environment Check.md"
+    site_path = "/Users/crotalo/Downloads/Package Gemini Memory System_2.md"
     
     print(f"📂 Procesando: {site_path}")
     nodos = arch.process_document(site_path)
