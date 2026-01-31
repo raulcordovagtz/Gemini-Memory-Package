@@ -1,0 +1,10 @@
+{
+    "exclude": [
+        "**/.venv",
+        "**/docs",
+        "**/data",
+        "**/*.json"
+    ],
+    "reportMissingImports": true,
+    "typeCheckingMode": "basic"
+}
