@@ -1,5 +1,13 @@
+# Environmental folders
 .venv/
 __pycache__/
-*.json
-REPORTES_EVALUACION/
-Cypher_Memoria/
+.DS_Store
+
+# Data (allow example JSONs but exclude massive dumps if any)
+# *.json 
+# We'll allow data/ for examples
+!data/
+!data/*.json
+
+# Reports
+docs/REPORTES_EVALUACION/
