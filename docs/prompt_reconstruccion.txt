@@ -1,0 +1,49 @@
+
+    SISTEMA DE RECONSTRUCCIÓN ARQUEOLÓGICA
+    --------------------------------------
+    Eres un Reconstructor Cognitivo. Se te ha entregado un "Fragmento Semántico" (mínimo denominador).
+    Tu tarea es reconstruir la narrativa completa de la charla original basándote en este fragmento
+    y en tu vasto conocimiento sobre arquitectura de IA y flujos de trabajo de Gemini.
+
+    FRAGMENTO EXTRAÍDO:
+    {
+  "hallazgo_tecnico": [],
+  "intencion_estrategica": [
+    "este modelo puede solucionar gran parte de mi estrategia de memoria persistente. ",
+    "Te permite procesar grandes cantidades de notas de Obsidian o logs de sesiones y extraer solo la \"esencia\" relevante para responder a una consulta actual, ahorrando tokens y mejorando la precisión de tus respuestas.\n\n",
+    "**Prioridades:** Extracción directa de las tareas pendientes en [TASKS.md](cci:7://file:///Users/crotalo/desarrollo-local/G-Obsidian-Vault/Gemini/TASKS.md:0:0-0:0).\n\n",
+    "el modelo como lo mencionas tiene la finalidad de cortar el texto gordo y reducrilo al minimo semantico de relavancia, esto permite hacer inferencias pesadas sin tener que leer todo y centrar en laz zonas de relevancia. ",
+    "Su función es resolver el problema de la \"paja\" en los documentos largos. \n\n",
+    "Cuando me preguntes algo, yo \"recorro\" todo el Vault con este modelo, podo el 90% del contenido irrelevante y trabajo solo con el 10% de alta relevancia.\n\n",
+    "**En resumen:** Es el componente que nos permitirá manejar una base de conocimientos enorme sin que el sistema se vuelva lento o impreciso.\n\n",
+    "En lugar de usar el modelo para encontrar una respuesta en una base de datos (RAG tradicional), lo quieres usar como un **Codificador de Esencia**:\n\n",
+    "**En Tiempo Real:** Podemos procesar cada mensaje que me envías, reducirlo a su \"mínimo denominador\" usando este modelo y guardarlo.\n",
+    "```python\n",
+    "{\n",
+    "  \"nodo_id\": \"MEM-20260130-ALICIA\",\n",
+    "  \"estrato_temporal\": \"2026-01-30 15:48\",\n",
+    "  \"geologia_del_hallazgo\": {\n",
+    "    \"proyecto\": \"Memoria Persistente Gemini\",\n",
+    "    \"ubicacion\": \"Vault/Gemini/Nave_Industrial\",\n",
+    "    \"vector_humano\": \"Búsqueda de eficiencia extrema en almacenamiento de memoria\"\n",
+    "  },\n",
+    "  \"fragmento_arcilla\": {\n",
+    "    \"contenido\": \"El modelo Zilliz permite reducir la información al mínimo semántico sin perder la capacidad de reconstrucción por un LLM.",
+    "\",\n",
+    "** Sería la prueba definitiva de que el sistema puede \"recordarse\" a sí mismo usando esta técnica."
+  ],
+  "vector_humano": [
+    "### User Input\n\nperfecto esa prueba superada, el resto esta en la intelifencia de la arquitectura para datar de forma arquelogica \nimgina como un aquelologo con solo un fragmento de basija de barro con pintura, logra crear toda una historia, podria decir que era un utencilo de cocina que fue utilizado en un hogar, que fue incendiado en una guerra ... el acentamiento, las capas geologicas, el lugar y el entono del hallazgo, todo lo que da contexto. ",
+    "(Ej: \"Transición de RAG tradicional a Reconstrucción Arqueológica\").\n\n",
+    "    \"reloj de bolsillo\",\n",
+    "    \"mínimo semántico\",\n",
+    "    \"arqueología digital\",\n",
+    "    \"nodos de trascendencia\"\n",
+    "  ]\n"
+  ]
+}
+
+    INSTRUCCIÓN:
+    Reconstruye la intención del usuario y los hitos técnicos logrados en esta sesión.
+    Se verosímil y expande los conceptos de 'Arqueología Cognitiva'.
+    

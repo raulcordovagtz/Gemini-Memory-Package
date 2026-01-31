@@ -1,0 +1,20 @@
+# Gemini Memory Package - Minimal Requirements
+# Optimized for Apple Silicon (MPS) and Generic CPU
+
+# Core ML and NLP
+torch>=2.0.0
+transformers==4.48.1
+safetensors==0.5.2
+accelerate>=0.20.0
+sentencepiece
+huggingface-hub
+nltk
+scikit-learn
+
+# Graph Database
+neo4j==6.1.0
+
+# API and Utilities
+requests
+numpy
+pytz
